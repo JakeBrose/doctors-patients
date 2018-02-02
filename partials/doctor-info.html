@@ -1,7 +1,7 @@
 <h1>Doctor Info</h1>
 
-<div ng-repeat = "Doc in DocData">
-    <p><a ng-href="">Name: {{Doc.first_name}} {{Doc.last_name}}</a></p>
+<div ng-repeat = "(id, Doc) in DocData">
+    <p><a ng-href="/#!/doctors/{{id}}">Name:{{Doc.first_name}} {{Doc.last_name}}</a></p>
     <p>Speciality: {{Doc.speciality}}</p>
 </div>
 

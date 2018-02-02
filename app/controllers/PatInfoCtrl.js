@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module("docs").controller("PatInfoCtrl", function($scope, PatientFactory){
+angular.module("docs").controller("PatInfoCtrl", function($scope, PatientFactory, $routeParams){
     
-    PatientFactory.getPatientInfo().then(function(data){
+    PatientFactory.getPatientInfo($routeParams.id).then(function(data){
         console.log("data", data);
         $scope.patientData = data.data;
     }).catch(function(error){

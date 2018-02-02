@@ -5,7 +5,7 @@ angular.module("docs").factory("DoctorFactory", function($http, $q, FBUrl){
             return $q(function(resolve, reject){
                 $http.get(`${FBUrl}/doctors.json`)
                 .then(function(data){
-                    resolve(data);
+                    resolve(data);                    
                 })
                 .catch(function(error){
                     reject(error);
